@@ -75,7 +75,7 @@ const page = () => {
       </div>
       <div className='w-[90%] h-full'>
           <div className='text-2xl'>
-            Liquidity Pools
+            Liquidity Pool
           </div>
           <div className='w-full'>
               <div className='w-[60%] border-slate-400 border rounded-lg h-full flex'>
