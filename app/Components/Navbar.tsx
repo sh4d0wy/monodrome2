@@ -14,7 +14,7 @@ const Navbar = () => {
             {items.map((item,index)=>{
                 return(
                     <Link href={`/site/${item.toLowerCase()}`}>
-                    <div className={`${index!=page?'text-[#6A768A] hover:text-white':'text-white font-bold border-b border-b-green-200'} cursor-pointer`}
+                    <div className={`${index!=page?'text-[#6A768A] text-xl hover:text-white py-2':'text-white font-bold border-b-4 border-b-[#8A0656] text-xl py-2'} cursor-pointer`}
                     onClick={()=>setPage(index)}>
                     {item}
                     </div>

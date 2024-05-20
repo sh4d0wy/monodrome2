@@ -13,7 +13,7 @@ const page = () => {
                             </div>
                             <span className='hidden lg:flex'>New Deposit</span>
                     </div>
-                    <div className='w-full bg-[#121B2C] py-6 px-6 text-[1rem]'>
+                    <div className='w-full bg-[#252d37] py-6 px-6 text-[1rem]'>
                         <input type='text' placeholder='To receive emissions deposit and stake your liquidity first.' className='bg-transparent w-full outline-none border-none'/>
                     </div>
             </div>
@@ -24,7 +24,7 @@ const page = () => {
                                 <GoQuestion />
                             </div>
                     </div>
-                    <div className='w-full bg-[#121B2C] py-6 px-6 text-[1rem]'>
+                    <div className='w-full bg-[#252d37] py-6 px-6 text-[1rem]'>
                         <input type='text' placeholder='To receive emissions deposit and stake your liquidity first.' className='bg-transparent w-full outline-none border-none'/>
                     </div>
             </div>
@@ -36,7 +36,7 @@ const page = () => {
                             </div>
                             <span className='hidden lg:flex'>All Relays</span>
                     </div>
-                    <div className='w-full bg-[#121B2C] py-6 px-6 text-[1rem]'>
+                    <div className='w-full bg-[#252d37] py-6 px-6 text-[1rem]'>
                         <input type='text' placeholder='To receive emissions deposit and stake your liquidity first.' className='bg-transparent w-full outline-none border-none'/>
                     </div>
             </div>
@@ -47,7 +47,7 @@ const page = () => {
                                 <GoQuestion />
                             </div>
                     </div>
-                    <div className='w-full bg-[#121B2C] py-6 px-6 text-[1rem]'>
+                    <div className='w-full bg-[#252d37] py-6 px-6 text-[1rem]'>
                         <input type='text' placeholder='To receive emissions deposit and stake your liquidity first.' className='bg-transparent w-full outline-none border-none'/>
                     </div>
             </div>
@@ -59,7 +59,7 @@ const page = () => {
                             </div>
                             <span className='hidden lg:flex'>New Deposit</span>
                     </div>
-                    <div className='w-full bg-[#121B2C] py-6 px-6 text-[1rem]'>
+                    <div className='w-full bg-[#252d37] py-6 px-6 text-[1rem]'>
                         <input type='text' placeholder='To receive emissions deposit and stake your liquidity first.' className='bg-transparent w-full outline-none border-none'/>
                     </div>
             </div>

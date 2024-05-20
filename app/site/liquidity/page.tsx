@@ -51,7 +51,7 @@ possible.Depositand Stakeliquidity toearn VELO.</span>
           <p className='mt-[3rem] lg:mt-[2vw] text-slate-300'><span className='text-slate-400'>There are currently 159 tokens listed</span> View Tokens <span className='text-slate-400'>or</span> List New Token</p>
           
         </div>
-          <div className='w-[30%] hidden lg:flex flex-col gap-[4vw] items-start justify-center bg-[#1C2938] h-full'>
+          <div className='w-[30%] hidden lg:flex flex-col gap-[4vw] items-start justify-center bg-[#121B2C] h-full'>
             <div className='px-[3vw] py-[4vw] pt-[1.5vw] flex flex-col gap-14 items-start justify-center w-[90%]'>
               <div className='text-2xl text-slate-400 '>How it works</div>
               <div className='text-md text-slate-400'>

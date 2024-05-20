@@ -7,7 +7,7 @@ const page=()=>{
     return(
         <div className="w-full h-fit flex px-4 lg:px-12 flex-col items-center justify-center overflow-hidden">
             <div className="w-full h-full flex flex-col lg:flex-row flex items-center justify-center gap-[5vw] mt-[4%] mb-[4%]">
-            <div className='flex flex-col w-[98%] md:w-[80%] lg:w-[40%] gap-[1vw] bg-[#1F283B] p-[2rem] lg:p-[2%] rounded-xl'>
+            <div className='flex flex-col w-[98%] md:w-[80%] lg:w-[40%] gap-[1vw] bg-[#252d37] p-[2rem] lg:p-[2%] rounded-xl'>
                 <p></p>
                 <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
                 <div className='flex justify-between w-full text-[#647186]'>

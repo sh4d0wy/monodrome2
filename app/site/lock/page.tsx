@@ -96,7 +96,7 @@ const page = () => {
                                 <GoQuestion />
                             </div>
                     </div>
-                    <div className='w-full bg-[#121B2C] py-6 px-6 text-[1rem]'>
+                    <div className='w-full bg-[#252d37] py-6 px-6 text-[1rem]'>
                         <input type='text' placeholder='To receive emissions deposit and stake your liquidity first.' className='bg-transparent w-full outline-none border-none'/>
                     </div>
         </div>
@@ -110,7 +110,7 @@ const page = () => {
                     <div className='flex flex-col gap-3 w-full'>
                         {relays.map((relay)=>{
                             return(
-                                <div className='bg-[#1F293A] p-[2rem] rounded-xl'>
+                                <div className='bg-[#252d37] p-[2rem] rounded-xl'>
                                     <div className='flex flex-col gap-[1rem]'>
                                     <div className='flex'>
                                         <div></div>

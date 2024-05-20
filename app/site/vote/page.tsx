@@ -5,7 +5,7 @@ const page = () => {
   return (
     <div className="w-full h-fit flex flex-col items-center justify-center overflow-x-hidden gap-[5rem] ">
 
-      <div className='flex flex-col  bg-[#192435] border border-[#192435] hover:border-slate-700 hover:bg-[#1F283B] rounded-lg p-[1%] gap-[1rem] w-[90%]'>
+      <div className='flex flex-col  bg-[#252d37] border border-[#192435] hover:border-slate-700 hover:bg-[#1F283B] rounded-lg p-[1%] gap-[1rem] w-[90%]'>
         <div className='flex justify-between items-center'>
             <div className='flex gap-2 text-lg text-slate-400'>
                 <div>Current voting round</div>

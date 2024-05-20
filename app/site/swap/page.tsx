@@ -10,7 +10,7 @@ const page = () => {
       <div className="flex flex-col lg:flex-row gap-4 lg:gap-10 py-20 w-full lg:w-[90%] items-center justify-center h-[50rem] lg:h-[34rem]">
         <div
           id="swap-box"
-          className="bg-[#1F283B] w-full lg:w-[50%] h-full py-10 px-4 lg:px-10 flex flex-col gap-4 h-full rounded-xl"
+          className="bg-[#252d37] w-full lg:w-[50%] h-full py-10 px-4 lg:px-10 flex flex-col gap-4 h-full rounded-xl"
         >
           <div className="flex justify-between w-full text-[#647186]">
             <span>Swap</span>
@@ -78,7 +78,7 @@ const page = () => {
             />
           </div>
         </div>
-        <div className="bg-[#192435] w-full lg:w-[40%] h-full flex flex-col gap-10 py-4 px-4 lg:py-12 lg:px-12 rounded-xl">
+        <div className="bg-[#252d37] w-full lg:w-[40%] h-full flex flex-col gap-10 py-4 px-4 lg:py-12 lg:px-12 rounded-xl">
           <div className='text-2xl' >Swap</div>
           <div className="flex flex-col">
             <div className="flex gap-4">
