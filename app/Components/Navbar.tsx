@@ -5,16 +5,16 @@ const Navbar = () => {
     const items = ["Swap","Dashboard","Liquidity","Vote","Lock","Incentivize"];
     const [page,setPage] = useState(0);
   return (
-    <div className='w-full flex items-center justify-center'>
-    <div className='w-[90%] h-fit py-10 px-12 flex justify-between'>
-        <div className='text-2xl font-bold'>
+    <div className='w-full flex items-center justify-center '>
+    <div className='w-[90%] h-fit lg:py-10 lg:px-12 flex justify-between py-2 px-1'>
+        <div className='text-xl font-bold lg:text-3xl'>
                 megadrome
         </div>
-        <div className='flex gap-6'>
+        <div className=' hidden lg:flex gap-10 text-lg'>
             {items.map((item,index)=>{
                 return(
                     <Link href={`/site/${item.toLowerCase()}`}>
-                    <div className={`${index!=page?'text-[#6A768A]':'text-white font-bold border-b border-b-green-200'} cursor-pointer`}
+                    <div className={`${index!=page?'text-[#6A768A] hover:text-white':'text-white font-bold border-b border-b-green-200'} cursor-pointer`}
                     onClick={()=>setPage(index)}>
                     {item}
                     </div>
@@ -23,9 +23,9 @@ const Navbar = () => {
                 
             })}
         </div>
-        <div>
+        <button className='text-sm lg:text-md border border-slate-400 p-[1%] rounded-xl hover:bg-[#6A768A] '>
             Connect Wallet
-        </div>
+        </button>
     </div>
     </div>
   )
