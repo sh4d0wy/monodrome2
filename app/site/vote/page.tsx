@@ -57,7 +57,7 @@ const page = () => {
                 </div> 
               </div>
             </div>
-            <div className='w-full h-full flex flex-col bg-[#252d37] px-6 py-1'>
+            <div className='w-full h-full flex flex-col bg-[#252d37] px-6 py-6 gap-8'>
               <div className='w-full h-full flex py-2'>
                   <div id="pools" className='flex items-start gap-2 w-[40%]'>
                     <div className='relative flex justify-start'>
