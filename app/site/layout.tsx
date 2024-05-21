@@ -1,11 +1,12 @@
 import React, { ReactNode } from 'react'
 import Navbar from '../Components/Navbar'
-
+import Footer from '../Components/Footer'
 const layout = ({children}:{children:ReactNode}) => {
   return (
-    <div className='bg-gradient-to-b from-[#20242B] to-[#0D1014] w-full h-full'>
+    <div className='bg-gradient-to-b from-[#1E242B] to-[#0D1015] w-full h-full'>
         <Navbar/>
         {children}
+        <Footer/>
     </div>
   )
 }
