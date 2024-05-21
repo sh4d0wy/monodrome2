@@ -84,7 +84,7 @@ const page = () => {
   return (
     <div className="w-full h-fit flex py-2 lg:py-0 px-2 lg:px-12 flex-col items-center justify-center gap-[3rem] lg:gap-[5rem]">
         <div className='w-[95%] lg:w-[90%] bg-gradient-to-t from-[#0F1820] to-[#162C25] rounded-xl'>
-            <div className='flex flex-col lg:flex-row items-center justify-around p-[2rem] lg:p-[4rem] gap-[2rem] lg:gap-0'>
+            <div className='flex flex-col lg:flex-row items-center justify-around p-[2rem] lg:p-[2.5rem] gap-[2rem] lg:gap-0'>
                 <p className='text-lg'>Gain greater <span className='text-bold'>voting power and higher rewards</span> , by locking more tokens for longer.</p>
                 <button className='text-white bg-green-500 px-4 py-2 rounded-xl self-start lg:self-center'>Create Lock</button>
             </div>

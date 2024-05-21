@@ -10,11 +10,11 @@ const Navbar = () => {
         <div className='text-xl font-bold lg:text-3xl'>
                 megadrome
         </div>
-        <div className=' hidden lg:flex gap-10 text-lg'>
+        <div className=' hidden lg:flex gap-10'>
             {items.map((item,index)=>{
                 return(
                     <Link href={`/site/${item.toLowerCase()}`}>
-                    <div className={`${index!=page?'text-[#6A768A] text-xl hover:text-white py-2':'text-white font-bold border-b-4 border-b-[#8A0656] text-xl py-2'} cursor-pointer`}
+                    <div key={index} className={`${index!=page?'text-[#6A768A] text-md hover:text-white py-2':'text-white font-bold border-b-4 border-b-[#8A0656] text-md py-2'} cursor-pointer`}
                     onClick={()=>setPage(index)}>
                     {item}
                     </div>
@@ -23,7 +23,7 @@ const Navbar = () => {
                 
             })}
         </div>
-        <button className='text-sm lg:text-md border border-slate-400 p-[1%] rounded-xl hover:bg-[#6A768A] '>
+        <button className='text-sm lg:text-md border border-slate-400 p-[1%] rounded-md hover:bg-[#6A768A] '>
             Connect Wallet
         </button>
     </div>
