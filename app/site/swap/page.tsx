@@ -1,8 +1,7 @@
 import React from 'react'
 import Image from 'next/image';
-import { FaChevronDown, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
-import { FaX } from 'react-icons/fa6';
-import { IoSunnySharp } from "react-icons/io5";
+import { FaChevronDown } from 'react-icons/fa';
+
 
 const page = () => {
   return (
