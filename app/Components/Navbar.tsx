@@ -3,9 +3,9 @@ import React, { useState } from 'react'
 import Link from 'next/link';
 const Navbar = () => {
     const items = ["Swap","Dashboard","Liquidity","Vote","Lock","Incentivize"];
-    const [page,setPage] = useState(0);
+    const [page,setPage] = useState(-1);
   return (
-    <div className='w-full flex items-center justify-center '>
+    <div className='w-full flex items-center justify-center relative z-10 '>
     <div className='w-[90%] h-fit lg:py-10 lg:px-12 flex justify-between py-2 px-1'>
         <div className='text-xl font-bold lg:text-3xl'>
                 megadrome

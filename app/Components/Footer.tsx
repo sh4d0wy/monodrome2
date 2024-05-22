@@ -6,7 +6,7 @@ import { IoSunnySharp } from "react-icons/io5";
 const Footer = () => {
   return (
     <div className='flex items-center justify-center lg:flex'>
-      <div id='footer' className='h-[50%] flex flex-col pt-4 lg:pt-44 pb-12 px-8  w-[90%] items-center justify-center gap-[2rem]'>
+      <div id='footer' className='h-fit flex flex-col pt-4 lg:pt-44 pb-12 px-8  w-[90%] items-center justify-center gap-[2rem]'>
         <div className='flex justify-between items-center w-full'>
             <div className='flex flex-col lg:flex-row gap-10 w-full'>
                 <span className='text-[1.2rem] text-white'>Articles</span>
