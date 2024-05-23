@@ -23,7 +23,6 @@ const Footer = () => {
             <div>
                 <IoSunnySharp size={30} />
             </div>
-            <div></div>
         </div>
         <div className='w-full'>
             <hr className='w-full border border-slate-800 '/>
