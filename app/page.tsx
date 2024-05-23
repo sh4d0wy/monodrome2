@@ -116,19 +116,19 @@ export default function Home() {
           </div>
           <div className=" w-[40%] flex items-end relative top-40 right-20">
           <div ref={scope} className="border-[4px] border-[#5E0457] z-10 w-[15rem] h-[15rem] rounded-full absolute">
-          <div  className="bg-red-700 w-6 h-6 z-30 p-2 rounded-full text-white absolute left-[5rem] -bottom-2 flex items-center justify-center"><FaChevronLeft/>
+          <div  className="bg-red-700 w-6 h-6 z-30 p-2 rounded-full text-white absolute left-[5rem] -bottom-3 flex items-center justify-center"><FaChevronLeft/>
             </div>
           </div>
           <div ref={scope1} className=" border-[4px] border-transparent z-10 w-[15rem] h-[15rem] rounded-full absolute">
-          <div id="prop" className="bg-red-700 w-6 h-6 z-20 p-2 rounded-full text-white absolute left-[5rem] -bottom-2 flex items-center justify-center"><FaChevronRight/>
+          <div id="prop" className="bg-red-700 w-6 h-6 z-20 p-2 rounded-full text-white absolute left-[5rem] -bottom-3 flex items-center justify-center"><FaChevronRight/>
             </div>
           </div>
           
             <div className="border-[4px] border-[#480B5D] w-[30rem] h-[15rem] font-bold rounded-full absolute ">
-              <div className="bg-white text-[0.7rem] text-black rounded-xl z-50 w-[25%] flex items-center justify-center relative left-12 bottom-[0.5rem] py-1">veMEGA VOTERS</div>
-              <div className="bg-white text-[0.7rem] text-black rounded-xl z-40 w-[15%] top-[12rem] flex items-center justify-center relative left-[5rem] py-1">LPs</div>
+              <div className="bg-white text-[0.7rem] text-black rounded-xl z-50 w-[25%] bottom-[1rem] flex items-center justify-center relative left-12 bottom-[0.5rem] py-2">veMEGA VOTERS</div>
+              <div className="bg-white text-[0.7rem] text-black rounded-xl z-40 w-[15%] top-[11.5rem] flex items-center justify-center relative left-[5rem] py-2">LPs</div>
               <div className="bg-white text-[0.7rem] text-black rounded-xl z-50 w-[25%]  flex items-center justify-center relative left-[25rem] px-8 py-1">PROTOCOLS</div>
-              <div className="bg-white text-[0.7rem] text-black rounded-xl z-50 w-[15%] top-[4rem] flex items-center justify-center relative right-[2rem] px-4 py-1">TRADERS</div>
+              <div className="bg-white text-[0.7rem] text-black rounded-xl z-50 w-[15%] top-[2rem] flex items-center justify-center relative right-[2rem] px-4 py-1">TRADERS</div>
               <div className="flex absolute w-fit items-center z-50 gap-1 top-[4rem] -left-7"> 
                 <div className="text-[0.7rem]">FEES</div>
                 <div className="bg-white rounded-full w-3 h-3"></div>
@@ -206,7 +206,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="w-[80%] text-3xl flex justify-center gap-20 items-center">
+        <div className="w-[70%] text-3xl font-bold flex justify-between gap-20 items-center">
           <div className="flex flex-col  items-center justify-center">
           <span>$150.06M</span>
           <span className="text-[0.7rem]">Total Value Locked</span>
