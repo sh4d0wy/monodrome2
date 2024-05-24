@@ -11,15 +11,15 @@ import { useEffect, useState } from "react";
 export default function Home() {
   const [scope,animate] = useAnimate();
   const [scope1,animate1] = useAnimate();
-  const [started,setStarted] = useState<boolean|null>(null);
+  const [started,setStarted] = useState<boolean|null>(true);
   useEffect( 
     ()=>{
       function animation(){
-        setStarted(started=>true);
         animate(scope.current,{rotate:[0,120,280,360]},{duration:6})
         setTimeout(
           ()=>{
             animate1(scope1.current,{x:"15rem"},{duration:2,ease:"easeInOut"})
+            animate1(scope1.current,{opacity:1,y:0})
       
           },6000
         )
@@ -32,11 +32,28 @@ export default function Home() {
         )
         setTimeout(
           ()=>{
-  
             animate1(scope1.current,{x:0},{duration:2,ease:"easeInOut"})
+           
           },10000
         )
-        setStarted(started=>false);
+        setTimeout(
+          ()=>{
+            animate1(scope1.current,{opacity:0})
+          },
+          12000
+        )
+        setTimeout(
+          ()=>{
+            animate1(scope1.current,{rotate:[-180,0]})
+            animate1(scope1.current,{x:0},{duration:1,ease:"easeInOut"})
+          },
+          13000
+        )
+        setTimeout(
+          ()=>{
+            setStarted(!started);
+          },13000
+        )
       }
       animation()
     },[started]);
