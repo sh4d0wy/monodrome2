@@ -43,7 +43,7 @@ const Navbar = () => {
                 }
             })}
         </div>
-        <button className='text-sm lg:text-md rounded-xl hover:bg-[#6A768A] '>
+        <button className='text-sm lg:text-md w-full flex justify-center items-center rounded-xl hover:bg-[#6A768A] '>
             <ConnectButton/>
         </button>
     </div>
