@@ -1,10 +1,11 @@
 "use client"
 import React, { useState,useContext } from 'react'
-import UserContext from '../Context/UserContext';
+import {UserContext} from '../Context/UserContextProvider';
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 import Link from 'next/link';
 import { useAccount } from 'wagmi';
 import Image from 'next/image';
+
 const Navbar = () => {
     const address = useAccount()
     const items = ["Swap","Liquidity","Dashboard","Vote","Lock","Incentivize"];
@@ -20,7 +21,7 @@ const Navbar = () => {
         </div>
         <div className=' hidden w-full lg:flex lg:justify-center gap-10 text-lg'>
             {items.map((item,index)=>{
-                if(!address.address ){
+                if(!address.address){
                     if(index<2)
                     return(
                         <Link href={`/site/${item.toLowerCase()}`}>

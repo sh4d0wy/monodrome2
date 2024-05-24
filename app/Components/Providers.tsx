@@ -16,6 +16,7 @@ import {
   QueryClient
 } from "@tanstack/react-query";
 import { ReactNode } from 'react';
+import UserContextProvider from '../Context/UserContextProvider';
 
 export default function Provider({children}:{children:ReactNode}){
     const projectId = "73c18f0d44294688087b7b4f170ee948";
@@ -33,7 +34,9 @@ export default function Provider({children}:{children:ReactNode}){
         <RainbowKitProvider theme={darkTheme({
             accentColor:"#8B075E"
         })}>
+          <UserContextProvider>
           {children}
+          </UserContextProvider>
         </RainbowKitProvider>
       </QueryClientProvider>
     </WagmiProvider>
