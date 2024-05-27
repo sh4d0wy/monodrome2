@@ -88,10 +88,10 @@ const page = () => {
           </div>
           </div>
         }
-      <div className="flex flex-col lg:flex-row gap-4 lg:gap-10 py-20 w-full lg:w-[90%] items-center justify-center h-[50rem] lg:h-[30rem] relative z-10">       
+      <div className="flex flex-col lg:flex-row gap-4 my-6 lg:gap-5 w-full md:w-[60%] lg:w-[90%] items-center justify-center h-[40rem] lg:h-[20rem] relative z-10">       
         <div
           id="swap-box"
-          className="bg-[#252d37] w-full lg:w-[50%] h-full py-10 px-4 lg:px-10 flex flex-col gap-4 h-full rounded-xl"
+          className="bg-[#252d37] w-full lg:w-[45%] h-full py-10 px-4 lg:px-10 flex flex-col gap-4 h-full rounded-xl"
         >
           <div className="flex justify-between w-full text-[#647186]">
             <span>Swap</span>
@@ -159,14 +159,14 @@ const page = () => {
             />
           </div>
         </div>
-        <div className="bg-[#252d37] w-full lg:w-[40%] h-full flex flex-col gap-10 py-4 px-4 lg:py-7 lg:px-12 rounded-xl">
+        <div className="bg-[#252d37] w-full lg:w-[37%] h-full flex flex-col gap-10 py-4 px-4 lg:py-7 lg:px-12 rounded-xl">
           <div className='text-2xl' >Swap</div>
           <div className="flex flex-col">
             <div className="flex gap-4">
               <div className="bg-[#0F172B] text-white rounded-full py-1 px-1 flex justify-center text-[0.7rem] h-6 w-6">
                 1
               </div>
-              <div className="text-md text-slate-500">
+              <div className="text-sm text-neutral-00">
                 Start by selecting the token to Swap from and the amount you want to
                 exchange
               </div>
@@ -177,7 +177,7 @@ const page = () => {
               <div className="bg-[#0F172B] text-white rounded-full py-1 px-1 flex justify-center text-[0.7rem] h-6 w-6">
                 2
               </div>
-              <div className="text-md text-slate-500">
+              <div className="text-sm text-white">
               Pick the token you want to exchange for
               </div>
             </div>
@@ -187,7 +187,7 @@ const page = () => {
               <div className="bg-[#0F172B] text-white rounded-full py-1 px-1 flex justify-center text-[0.7rem] h-6 w-6">
                 3
               </div>
-              <div className="text-md text-slate-500">
+              <div className="text-sm text-white">
               The quote will be ready in a moment!
               </div>
             </div>

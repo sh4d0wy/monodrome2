@@ -83,10 +83,10 @@ const page = () => {
     ]
   return (
     <div className="w-full h-fit flex py-2 lg:py-0 px-2 lg:px-12 flex-col items-center justify-center gap-[3rem] lg:gap-[5rem]">
-        <div className='w-[95%] lg:w-[90%] bg-gradient-to-t from-[#0F1820] to-[#162C25] rounded-xl'>
-            <div className='flex flex-col lg:flex-row items-center justify-around p-[2rem] lg:p-[2.5rem] gap-[2rem] lg:gap-0'>
+        <div className='w-[95%] lg:w-[90%] bg-gradient-to-r from-[#770250] to-[#230249] rounded-xl'>
+            <div className='flex flex-col lg:flex-row items-center justify-between p-[2rem] lg:p-[2rem] gap-[2rem] lg:gap-0'>
                 <p className='text-lg'>Gain greater <span className='text-bold'>voting power and higher rewards</span> , by locking more tokens for longer.</p>
-                <button className='text-white bg-green-500 px-4 py-2 rounded-xl self-start lg:self-center'>Create Lock</button>
+                <button className='text-white bg-[#721D86] px-4 py-2 rounded-xl self-start lg:self-center'>Create Lock</button>
             </div>
         </div>
         <div className='flex flex-col w-[90%] h-full gap-4 '>
@@ -96,7 +96,7 @@ const page = () => {
                                 <GoQuestion />
                             </div>
                     </div>
-                    <div className='w-full bg-[#252d37] py-6 px-6 text-[1rem]'>
+                    <div className='w-full bg-[#252d37] py-6 px-6 text-[1rem] rounded-md'>
                         <input type='text' placeholder='To receive emissions deposit and stake your liquidity first.' className='bg-transparent w-full outline-none border-none'/>
                     </div>
         </div>
@@ -110,7 +110,7 @@ const page = () => {
                     <div className='flex flex-col gap-3 w-full'>
                         {relays.map((relay)=>{
                             return(
-                                <div className='bg-[#252d37] p-[2rem] rounded-xl'>
+                                <div className='bg-[#252d37] p-[2rem] rounded-xl hover:border hover:border-slate-600'>
                                     <div className='flex flex-col gap-[1rem]'>
                                     <div className='flex'>
                                         <div></div>
