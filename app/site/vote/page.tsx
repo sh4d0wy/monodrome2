@@ -41,7 +41,7 @@ const page = () => {
                 </div>
             </div>
       </div> 
-      <div className='flex flex-col w-[90%] h-full gap-3'>
+      <div className='flex flex-col w-[90%] h-full gap-10 px-[1%]'>
         <div className='flex items-center justify-start w-full gap-2 '>
             <div className='text-lg'>Select Liquidity Pools for Voting</div>
             <GoQuestion  size={15} className='text-slate-300'/>
