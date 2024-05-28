@@ -8,7 +8,7 @@ import { DiVim } from 'react-icons/di';
 import { IoSearch } from "react-icons/io5";
 import { RxCross2 } from "react-icons/rx";
 const page = () => {
-  const [openTokens,setOpenTokens]= useState(false);
+  const [openTokens,setOpenTokens]= useState(true);
   const tokens=[{
     image:'https://assets.smold.app/api/token/8453/0x96e890c6b2501a69cad5dba402bfb871a2a2874c/logo.svg',
     name:'VELO',
@@ -58,16 +58,20 @@ const page = () => {
   return (
     <div className="w-full h-full flex px-4 lg:px-12 flex-col items-center justify-center overflow-x-hidden">
       {openTokens&& 
-          <div className='w-[100vw] h-[100vh] flex items-center justify-center absolute z-20'>
-            <div className='flex items-start justify-center bg-[#1F233C] w-[45%] h-[35rem] rounded-lg overflow-y-scroll'>
+      <>
+          <div className='bg-black w-[100vw] h-[100vh] absolute z-40 opacity-55'></div>
+          <div className='w-[100vw] h-[100vh] flex items-center justify-center absolute z-100'>
+            <div className='flex items-start justify-center bg-[#1F233C] w-[45%] h-[35rem] rounded-lg '>
             <div className='flex flex-col w-[90%] gap-[2rem] p-[1vw]'>
-              <div className='absolute z-20 top-20 bg-slate-500 rounded-xl p-2 self-end' onClick={()=>{setOpenTokens(false)}}><RxCross2 /></div>
-              <div className='flex border border-slate-700 rounded-md p-2'>
+              <div className='flex w-full gap-[2rem] justify-between'>
+              <div className='flex border border-slate-700 w-[70%] rounded-md p-2'>
                 <IoSearch className='text-slate-400 mr-2' size={25}/>
                 <input type="text" placeholder='WETH, USDC,0x....' className='bg-transparent outline-none'/>
               </div>
+              <div className='bg-slate-500 rounded-xl p-2 self-end' onClick={()=>{setOpenTokens(false)}}><RxCross2 /></div>
+              </div>
               <div className=''>
-              <div className='flex flex-col gap-[2rem]'>
+              <div className='flex flex-col gap-[2rem] overflow-y-scroll h-[25rem]'>
                 {tokens.map((token)=>{
                   return(
                     <div className='flex gap-[1rem] hover:bg-slate-400 p-4 rounded-md' onClick={()=>{setSelectedToken(`${token.name}`)}}>
@@ -81,12 +85,14 @@ const page = () => {
                       </div>
                     </div>
                   )
-                })}
+                })
+              }
               </div>
               </div>
             </div>
           </div>
           </div>
+          </>
         }
       <div className="flex flex-col lg:flex-row gap-4 my-6 lg:gap-5 w-full md:w-[60%] lg:w-[90%] items-center justify-center h-[40rem] lg:h-[20rem] relative z-10">       
         <div
@@ -118,7 +124,7 @@ const page = () => {
               className="bg-transparent px-4 select-none border-none outline-none text-slate-100"
             />
           </div>
-
+         
           <div className='flex items-center justify-center w-full gap-2'>
               <hr className='w-[50%] border  border-[#121B2C] border-1'/>
               <div className=" h-fit">
