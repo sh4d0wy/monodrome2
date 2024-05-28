@@ -144,7 +144,7 @@ const page = () => {
       <div className="flex flex-col lg:flex-row gap-10 mb-20 md:m-5 md:mb-10 w-full items-center justify-center h-[20rem] md:h-[20rem] lg:h-[16rem]">
         <div
           id="swap-box"
-          className="bg-[#1F283B] w-[95%] lg:w-[60%] h-full py-5 px-5 lg:py-10 lg:px-20 flex flex-col  gap-[1rem] lg:gap-[2rem] rounded-lg bg-gradient-to-r from-[#770250] to-[#230249] border border-[#5F0755] h-full"
+          className="bg-[#252D37] w-[95%] lg:w-[60%] h-full py-5 px-5 lg:py-10 lg:px-20 flex flex-col  gap-[1rem] lg:gap-[2rem] rounded-lg bg-gradient-to-r from-[#770250] to-[#230249] border border-[#5F0755] h-full"
         >
           <div className='flex justify-between md:flex-col lg:flex-row md:gap-2'>
             <div className="flex justify-between w-[90%] lg:w-[60%] text-slate-200  text-xs">

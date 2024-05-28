@@ -8,7 +8,7 @@ const page = () => {
   return (
     <div className="w-full h-fit flex flex-col items-center justify-center overflow-x-hidden gap-[5rem] ">
 
-      <div className='flex flex-col  bg-[#252d37] border border-[#192435] hover:border-slate-700 rounded-lg p-[3%] lg:p-[1%] gap-3 w-[90%]'>
+      <div className='flex flex-col  bg-[#252d37] border border-[#252D37] hover:border-slate-700 rounded-lg p-[3%] lg:p-[1%] gap-3 w-[90%]'>
         <div className='flex justify-between items-center'>
             <div className='flex gap-3 text-sm text-slate-400 items-center'>
                 <div className='flex'>

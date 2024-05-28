@@ -12,6 +12,9 @@ const config: Config = {
       sc1:"1500px"
     },
     extend: {
+      zIndex: {
+        '100': '100',
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":

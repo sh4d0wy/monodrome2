@@ -56,7 +56,7 @@ const page = () => {
   }]
   const [selectedToken,setSelectedToken]= useState('VELO');
   return (
-    <div className="w-full h-fit flex px-4 lg:px-12 flex-col items-center justify-center overflow-x-hidden">
+    <div className="w-full h-full flex px-4 lg:px-12 flex-col items-center justify-center overflow-x-hidden">
       {openTokens&& 
           <div className='w-[100vw] h-[100vh] flex items-center justify-center absolute z-20'>
             <div className='flex items-start justify-center bg-[#1F233C] w-[45%] h-[35rem] rounded-lg overflow-y-scroll'>

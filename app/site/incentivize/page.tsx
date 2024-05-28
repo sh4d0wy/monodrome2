@@ -6,7 +6,7 @@ import { IoSunnySharp } from "react-icons/io5";
 const page=()=>{
     return(
         <div className="w-full h-fit flex px-4 lg:px-12 flex-col items-center justify-center overflow-hidden">
-            <div className="w-full h-full flex flex-col lg:flex-row flex items-center justify-center gap-[2vw] mt-[4%] mb-[4%] lg:h-[30rem]">
+            <div className="w-full h-full flex flex-col lg:flex-row flex items-center justify-center gap-10 lg:gap-[2vw] mt-[4%] mb-[4%] lg:h-[30rem]">
             <div className='flex flex-col w-[98%] md:w-[60%] lg:w-[40%] gap-[0.5rem] bg-[#252d37] p-[2rem] lg:p-[2%] rounded-xl h-full'>
                 <p></p>
                 <hr className="h-px my-4 bg-gray-200 border-0 dark:bg-gray-700"></hr>
