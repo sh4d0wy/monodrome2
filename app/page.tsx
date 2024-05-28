@@ -11,14 +11,16 @@ import { useEffect, useState } from "react";
 export default function Home() {
   const [scope,animate] = useAnimate();
   const [scope1,animate1] = useAnimate();
+  const [scope2,animate2] = useAnimate();
   const [started,setStarted] = useState<boolean|null>(true);
   useEffect( 
     ()=>{
       function animation(){
-        animate(scope.current,{rotate:[0,120,280,360]},{duration:6})
+        animate(scope.current,{rotate:[-20,120,280,340]},{duration:6})
+        animate2(scope2.current,{pathLength:1},{duration:6})
         setTimeout(
           ()=>{
-            animate1(scope1.current,{x:"15rem"},{duration:2,ease:"easeInOut"})
+            animate1(scope1.current,{x:"14rem"},{duration:2,ease:"easeInOut"})
             animate1(scope1.current,{opacity:1,y:0})
       
           },6000
@@ -58,19 +60,7 @@ export default function Home() {
       animation()
     },[started]);
 
-  const arrowVariant = {
-    initial:{
-      y:0,
-      rotate:"-180deg"
-    },
-    animate:{
-      y:"10rem",
-      rotate:"180deg",
-      transition:{
-        duration:2
-      }
-    }
-  }
+
   return (
     <div className="w-[100vw] overflow-hidden h-full flex flex-col gap-20 items-center justify-center bg-[#1c044d] relative">
       <div className="absolute rounded-full z-10 bg-[#9F0861] w-[150vh] blur-[300px] h-[250vh] -top-20 -left-96"></div>
@@ -100,27 +90,27 @@ export default function Home() {
         <div className="w-[80%] grid  grid-cols-3 gap-4  text-lg">
           <div className="w-full rounded-xl border border-[#836EF9] flex justify-between px-6 py-6">
             <span> Stable & Volatile Trading for Low Fees </span>
-            <IoMdCheckmarkCircleOutline size={20}/>
+            <IoMdCheckmarkCircleOutline size={20} />
           </div>
           <div className="w-full rounded-xl border border-[#836EF9] flex justify-between px-6 py-6">
             <span> Stable & Volatile Trading for Low Fees </span>
-            <IoMdCheckmarkCircleOutline size={20}/>
+            <IoMdCheckmarkCircleOutline size={20} />
           </div>
           <div className="w-full rounded-xl border border-[#836EF9] flex justify-between px-6 py-6">
             <span> Stable & Volatile Trading for Low Fees </span>
-            <IoMdCheckmarkCircleOutline size={20}/>
+            <IoMdCheckmarkCircleOutline size={20} />
           </div>
           <div className="w-full rounded-xl border border-[#836EF9] flex justify-between px-6 py-6">
             <span> Stable & Volatile Trading for Low Fees </span>
-            <IoMdCheckmarkCircleOutline size={20}/>
+            <IoMdCheckmarkCircleOutline size={20} />
           </div>
           <div className="w-full rounded-xl border border-[#836EF9] flex justify-between px-6 py-6">
             <span> Stable & Volatile Trading for Low Fees </span>
-            <IoMdCheckmarkCircleOutline size={20}/>
+            <IoMdCheckmarkCircleOutline size={20} />
           </div>
           <div className="w-full rounded-xl border border-[#836EF9] flex justify-between px-6 py-6">
             <span> Stable & Volatile Trading for Low Fees </span>
-            <IoMdCheckmarkCircleOutline size={20}/>
+            <IoMdCheckmarkCircleOutline size={20} />
           </div>
         </div>
         <div className="w-[80%] h-full py-10 flex mb-32 ">
@@ -131,43 +121,343 @@ export default function Home() {
               of the protocol.
             </span>
           </div>
-          <div className=" w-[40%] flex items-end relative top-40 right-20">
-          <div ref={scope} className="border-[4px] border-[#5E0457] z-10 w-[15rem] h-[15rem] rounded-full absolute">
-          <div  className="bg-red-700 w-6 h-6 z-30 p-2 rounded-full text-white absolute left-[5rem] -bottom-3 flex items-center justify-center"><FaChevronLeft/>
+          <div className=" w-[40%] flex items-end relative top-40 right-20">    
+            <svg
+              ref={scope2} 
+              pathLength={0}
+              className="z-20 absolute svg -bottom-52 -right-[8rem] sc1:-right-24"
+              width="660"
+              height="658"
+              viewBox="0 0 659 659"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g filter="url(#filter0_dddddd_204_35)">
+                <path
+                  d="M446.847 206.674H209.894C147.057 206.674 96.1167 257.614 96.1167 320.451V336.24C96.1167 399.077 147.057 450.017 209.894 450.017H446.847C509.684 450.017 560.624 399.077 560.624 336.24V320.451C560.624 257.614 509.684 206.674 446.847 206.674Z"
+                  stroke="#25015E"
+                  stroke-width="4"
+                  stroke-miterlimit="10"
+                />
+              </g>
+              <defs>
+                <filter
+                  id="filter0_dddddd_204_35"
+                  x="-556.194"
+                  y="-445.637"
+                  width="1769.13"
+                  height="1547.96"
+                  filterUnits="userSpaceOnUse"
+                  color-interpolation-filters="sRGB"
+                >
+                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                  <feColorMatrix
+                    in="SourceAlpha"
+                    type="matrix"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                    result="hardAlpha"
+                  />
+                  <feOffset />
+                  <feGaussianBlur stdDeviation="7.74179" />
+                  <feColorMatrix
+                    type="matrix"
+                    values="0 0 0 0 0.152941 0 0 0 0 0 0 0 0 0 0.921569 0 0 0 1 0"
+                  />
+                  <feBlend
+                    mode="normal"
+                    in2="BackgroundImageFix"
+                    result="effect1_dropShadow_204_35"
+                  />
+                  <feColorMatrix
+                    in="SourceAlpha"
+                    type="matrix"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                    result="hardAlpha"
+                  />
+                  <feOffset />
+                  <feGaussianBlur stdDeviation="15.4836" />
+                  <feColorMatrix
+                    type="matrix"
+                    values="0 0 0 0 0.152941 0 0 0 0 0 0 0 0 0 0.921569 0 0 0 1 0"
+                  />
+                  <feBlend
+                    mode="normal"
+                    in2="effect1_dropShadow_204_35"
+                    result="effect2_dropShadow_204_35"
+                  />
+                  <feColorMatrix
+                    in="SourceAlpha"
+                    type="matrix"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                    result="hardAlpha"
+                  />
+                  <feOffset />
+                  <feGaussianBlur stdDeviation="54.1925" />
+                  <feColorMatrix
+                    type="matrix"
+                    values="0 0 0 0 0.152941 0 0 0 0 0 0 0 0 0 0.921569 0 0 0 1 0"
+                  />
+                  <feBlend
+                    mode="normal"
+                    in2="effect2_dropShadow_204_35"
+                    result="effect3_dropShadow_204_35"
+                  />
+                  <feColorMatrix
+                    in="SourceAlpha"
+                    type="matrix"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                    result="hardAlpha"
+                  />
+                  <feOffset />
+                  <feGaussianBlur stdDeviation="108.385" />
+                  <feColorMatrix
+                    type="matrix"
+                    values="0 0 0 0 0.152941 0 0 0 0 0 0 0 0 0 0.921569 0 0 0 1 0"
+                  />
+                  <feBlend
+                    mode="normal"
+                    in2="effect3_dropShadow_204_35"
+                    result="effect4_dropShadow_204_35"
+                  />
+                  <feColorMatrix
+                    in="SourceAlpha"
+                    type="matrix"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                    result="hardAlpha"
+                  />
+                  <feOffset />
+                  <feGaussianBlur stdDeviation="185.803" />
+                  <feColorMatrix
+                    type="matrix"
+                    values="0 0 0 0 0.152941 0 0 0 0 0 0 0 0 0 0.921569 0 0 0 1 0"
+                  />
+                  <feBlend
+                    mode="normal"
+                    in2="effect4_dropShadow_204_35"
+                    result="effect5_dropShadow_204_35"
+                  />
+                  <feColorMatrix
+                    in="SourceAlpha"
+                    type="matrix"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                    result="hardAlpha"
+                  />
+                  <feOffset />
+                  <feGaussianBlur stdDeviation="325.155" />
+                  <feColorMatrix
+                    type="matrix"
+                    values="0 0 0 0 0.152941 0 0 0 0 0 0 0 0 0 0.921569 0 0 0 1 0"
+                  />
+                  <feBlend
+                    mode="normal"
+                    in2="effect5_dropShadow_204_35"
+                    result="effect6_dropShadow_204_35"
+                  />
+                  <feBlend
+                    mode="normal"
+                    in="SourceGraphic"
+                    in2="effect6_dropShadow_204_35"
+                    result="shape"
+                  />
+                </filter>
+              </defs>
+            </svg>
+            <svg
+              ref={scope2} 
+              pathLength={0}
+              className="absolute z-10 svg -bottom-52 -right-[8rem] sc1:-right-24"
+              width="659"
+              height="659"
+              viewBox="0 0 659 659"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g filter="url(#filter0_dddddd_204_34)">
+                <path
+                  d="M216 452C282.826 452 337 396.483 337 328C337 259.517 282.826 204 216 204C149.174 204 95 259.517 95 328C95 396.483 149.174 452 216 452Z"
+                  stroke="#61004F"
+                  stroke-width="3"
+                  stroke-miterlimit="10"
+                />
+              </g>
+              <defs>
+                <filter
+                  id="filter0_dddddd_204_34"
+                  x="-364.804"
+                  y="-255.804"
+                  width="1161.61"
+                  height="1167.61"
+                  filterUnits="userSpaceOnUse"
+                  color-interpolation-filters="sRGB"
+                >
+                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                  <feColorMatrix
+                    in="SourceAlpha"
+                    type="matrix"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                    result="hardAlpha"
+                  />
+                  <feOffset />
+                  <feGaussianBlur stdDeviation="5.456" />
+                  <feColorMatrix
+                    type="matrix"
+                    values="0 0 0 0 1 0 0 0 0 0.672528 0 0 0 0 0.856664 0 0 0 1 0"
+                  />
+                  <feBlend
+                    mode="normal"
+                    in2="BackgroundImageFix"
+                    result="effect1_dropShadow_204_34"
+                  />
+                  <feColorMatrix
+                    in="SourceAlpha"
+                    type="matrix"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                    result="hardAlpha"
+                  />
+                  <feOffset />
+                  <feGaussianBlur stdDeviation="10.912" />
+                  <feColorMatrix
+                    type="matrix"
+                    values="0 0 0 0 1 0 0 0 0 0.672528 0 0 0 0 0.856664 0 0 0 1 0"
+                  />
+                  <feBlend
+                    mode="normal"
+                    in2="effect1_dropShadow_204_34"
+                    result="effect2_dropShadow_204_34"
+                  />
+                  <feColorMatrix
+                    in="SourceAlpha"
+                    type="matrix"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                    result="hardAlpha"
+                  />
+                  <feOffset />
+                  <feGaussianBlur stdDeviation="38.192" />
+                  <feColorMatrix
+                    type="matrix"
+                    values="0 0 0 0 1 0 0 0 0 0.672528 0 0 0 0 0.856664 0 0 0 1 0"
+                  />
+                  <feBlend
+                    mode="normal"
+                    in2="effect2_dropShadow_204_34"
+                    result="effect3_dropShadow_204_34"
+                  />
+                  <feColorMatrix
+                    in="SourceAlpha"
+                    type="matrix"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                    result="hardAlpha"
+                  />
+                  <feOffset />
+                  <feGaussianBlur stdDeviation="76.384" />
+                  <feColorMatrix
+                    type="matrix"
+                    values="0 0 0 0 0.529412 0 0 0 0 0.0117647 0 0 0 0 0.286275 0 0 0 1 0"
+                  />
+                  <feBlend
+                    mode="normal"
+                    in2="effect3_dropShadow_204_34"
+                    result="effect4_dropShadow_204_34"
+                  />
+                  <feColorMatrix
+                    in="SourceAlpha"
+                    type="matrix"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                    result="hardAlpha"
+                  />
+                  <feOffset />
+                  <feGaussianBlur stdDeviation="130.944" />
+                  <feColorMatrix
+                    type="matrix"
+                    values="0 0 0 0 0.529412 0 0 0 0 0.0117647 0 0 0 0 0.286275 0 0 0 1 0"
+                  />
+                  <feBlend
+                    mode="normal"
+                    in2="effect4_dropShadow_204_34"
+                    result="effect5_dropShadow_204_34"
+                  />
+                  <feColorMatrix
+                    in="SourceAlpha"
+                    type="matrix"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                    result="hardAlpha"
+                  />
+                  <feOffset />
+                  <feGaussianBlur stdDeviation="229.152" />
+                  <feColorMatrix
+                    type="matrix"
+                    values="0 0 0 0 0.529412 0 0 0 0 0.0117647 0 0 0 0 0.286275 0 0 0 1 0"
+                  />
+                  <feBlend
+                    mode="normal"
+                    in2="effect5_dropShadow_204_34"
+                    result="effect6_dropShadow_204_34"
+                  />
+                  <feBlend
+                    mode="normal"
+                    in="SourceGraphic"
+                    in2="effect6_dropShadow_204_34"
+                    result="shape"
+                  />
+                </filter>
+              </defs>
+            </svg>
+            
+            <div
+              ref={scope}
+              className="border-[4px] border-transparent w-[15.5rem] left-5 h-[15.5rem] z-30  rounded-full absolute"
+            >
+              <div className="bg-red-700 w-6 h-6 z-40 p-2 rounded-full text-white absolute left-[4rem] -bottom-2 flex items-center justify-center">
+                <FaChevronLeft />
+              </div>
             </div>
-          </div>
-          <div ref={scope1} className=" border-[4px] border-transparent z-10 w-[15rem] h-[15rem] rounded-full absolute">
-          <div id="prop" className="bg-red-700 w-6 h-6 z-20 p-2 rounded-full text-white absolute left-[5rem] -bottom-3 flex items-center justify-center"><FaChevronRight/>
+            <div
+              ref={scope1}
+              className="border-[4px] border-transparent w-[15.5rem] z-30 left-5 h-[15.5rem] rounded-full absolute"
+            >
+              <div
+                id="prop"
+                className="bg-red-700 w-6 h-6 z-40 p-2 rounded-full text-white absolute left-[5rem] -bottom-3 flex items-center justify-center"
+              >
+                <FaChevronRight />
+              </div>
             </div>
-          </div>
-          
-            <div className="border-[4px] border-[#480B5D] w-[30rem] h-[15rem] font-bold rounded-full absolute ">
-              <div className="bg-white text-[0.7rem] text-black rounded-xl z-50 w-[25%] bottom-[1rem] flex items-center justify-center relative left-12 bottom-[0.5rem] py-2">veMEGA VOTERS</div>
-              <div className="bg-white text-[0.7rem] text-black rounded-xl z-40 w-[15%] top-[11.5rem] flex items-center justify-center relative left-[5rem] py-2">LPs</div>
-              <div className="bg-white text-[0.7rem] text-black rounded-xl z-50 w-[25%]  flex items-center justify-center relative left-[25rem] px-8 py-1">PROTOCOLS</div>
-              <div className="bg-white text-[0.7rem] text-black rounded-xl z-50 w-[15%] top-[2rem] flex items-center justify-center relative right-[2rem] px-4 py-1">TRADERS</div>
-              <div className="flex absolute w-fit items-center z-50 gap-1 top-[4rem] -left-7"> 
+
+            <div className=" w-[30rem] h-[15.5rem] font-bold rounded-full absolute ">
+              <div className="bg-white text-[0.7rem] text-black rounded-xl z-50 w-[25%] bottom-[1rem] flex items-center justify-center relative left-20 bottom-[0.5rem] py-2">
+                veMEGA VOTERS
+              </div>
+              <div className="bg-white text-[0.7rem] text-black rounded-xl z-40 w-[20%] top-[12rem] flex items-center justify-center relative left-[6rem] py-2">
+                LPs
+              </div>
+              <div className="bg-white text-[0.7rem] text-black rounded-xl z-50 w-[25%]  flex items-center justify-center relative left-[27rem] px-8 py-1">
+                PROTOCOLS
+              </div>
+              <div className="bg-white text-[0.7rem] text-black rounded-xl z-50 w-[15%] top-[2rem] flex items-center justify-center relative right-[1rem] px-4 py-1">
+                TRADERS
+              </div>
+              <div className="flex absolute w-fit items-center z-50 gap-1 top-[4rem]">
                 <div className="text-[0.7rem]">FEES</div>
                 <div className="bg-white rounded-full w-3 h-3"></div>
               </div>
-              <div className="flex absolute w-fit items-center gap-1 z-50 top-[12rem] -left-12"> 
+              <div className="flex absolute w-fit items-center gap-1 z-50 top-[12rem] -left-10">
                 <div className="text-[0.7rem]">Low Slippage</div>
                 <div className="bg-white rounded-full w-3 h-3"></div>
               </div>
-              <div className="flex absolute w-fit items-center gap-1 z-50 top-[0.8rem] -right-5"> 
+              <div className="flex absolute w-fit items-center gap-1 z-50 top-[0.8rem] -right-5">
                 <div className="bg-white rounded-full w-3 h-3"></div>
                 <div className="text-[0.7rem]">Incentives</div>
               </div>
-              <div className="flex absolute w-fit items-center gap-1 top-[8rem] -right-[3.5rem]"> 
+              <div className="flex absolute w-fit items-center z-50 gap-1 top-[8rem] -right-[4rem]">
                 <div className="bg-white rounded-full w-3 h-3"></div>
                 <div className="text-[0.7rem]">Liquidity</div>
               </div>
-              <div className="flex absolute w-fit items-center gap-1 z-50 top-[3rem] left-[13rem]"> 
+              <div className="flex absolute w-fit items-center gap-1 z-50 top-[3rem] left-[15rem]">
                 <div className="bg-white rounded-full w-3 h-3"></div>
                 <div className="text-[0.7rem]">Mega Emissions</div>
               </div>
             </div>
-            <div className="border-[4px] border-[#5E0457] w-[15rem] h-[15rem] z-5 rounded-full absolute"></div>
+            <div className="border-[4px] border-transparent w-[15.5rem] left-5 h-[15.5rem] z-5 rounded-full absolute"></div>
           </div>
         </div>
         <div className="w-[80%] h-full px-4 grid grid-cols-4 gap-3 ">
@@ -178,7 +468,14 @@ export default function Home() {
               to MEGA lockers.
             </span>
             <div className="w-full h-full relative">
-            <Image src="/Images/binarymesh2.png" width={1000} height={1000} alt="mesh" className="absolute left-10 top-[14.8rem] " style={{transform:"scale(8)"}}/>
+              <Image
+                src="/Images/binarymesh2.png"
+                width={1000}
+                height={1000}
+                alt="mesh"
+                className="absolute left-10 top-[14.8rem] "
+                style={{ transform: "scale(8)" }}
+              />
             </div>
           </div>
           <div className="rounded-lg w-full relative gap-4  shadow-sm shadow-slate-500 flex flex-col items-start justify-start">
@@ -190,8 +487,15 @@ export default function Home() {
                 MEGO emissions as rewards.
               </span>
               <div className="w-full h-full relative">
-            <Image src="/Images/binarymesh2.png" width={1000} height={1000} alt="mesh" className="absolute right-[14rem] sc1:right-[16rem] sc1:top-[14.5rem] top-[13rem] " style={{transform:"scale(8)"}}/>
-            </div>
+                <Image
+                  src="/Images/binarymesh2.png"
+                  width={1000}
+                  height={1000}
+                  alt="mesh"
+                  className="absolute right-[14rem] sc1:right-[16rem] sc1:top-[14.5rem] top-[13rem] "
+                  style={{ transform: "scale(8)" }}
+                />
+              </div>
             </div>
           </div>
           <div className="rounded-lg w-full relative gap-4 shadow-sm shadow-slate-500 flex flex-col items-start justify-start">
@@ -204,8 +508,15 @@ export default function Home() {
                 low cost.
               </span>
               <div className="w-full h-full relative">
-            <Image src="/Images/binarymesh3.png" width={500} height={500} alt="mesh" className="absolute bottom-[6rem] left-[9rem]" style={{transform:"scale(5) rotate(300deg)"}}/>
-            </div>
+                <Image
+                  src="/Images/binarymesh3.png"
+                  width={500}
+                  height={500}
+                  alt="mesh"
+                  className="absolute bottom-[6rem] left-[9rem]"
+                  style={{ transform: "scale(5) rotate(300deg)" }}
+                />
+              </div>
             </div>
           </div>
           <div className="rounded-lg w-full  relative gap-4 shadow-sm shadow-slate-500 flex flex-col items-start justify-start">
@@ -218,28 +529,35 @@ export default function Home() {
                 can lock their tokens to convert to veMEGA.
               </span>
               <div className="w-full h-full relative">
-            <Image src="/Images/binarymesh3.png" width={500} height={500} alt="mesh" className="absolute bottom-[4rem] right-[6.5rem] sc1:right-[7.5rem]" style={{transform:"scale(5) rotate(300deg)"}}/>
-            </div>
+                <Image
+                  src="/Images/binarymesh3.png"
+                  width={500}
+                  height={500}
+                  alt="mesh"
+                  className="absolute bottom-[4rem] right-[6.5rem] sc1:right-[7.5rem]"
+                  style={{ transform: "scale(5) rotate(300deg)" }}
+                />
+              </div>
             </div>
           </div>
         </div>
         <div className="w-[70%] text-3xl font-bold flex justify-between gap-20 items-center">
           <div className="flex flex-col  items-center justify-center">
-          <span>$150.06M</span>
-          <span className="text-[0.7rem]">Total Value Locked</span>
+            <span>$150.06M</span>
+            <span className="text-[0.7rem]">Total Value Locked</span>
           </div>
-          
+
           <div className="flex flex-col items-center justify-center">
-          <span>$347.63M</span>
-          <span className="text-[0.7rem]">Monthly Volume</span>
-          </div>
-          <div className="flex flex-col items-center justify-center">
-          <span>$4.36M</span>
-          <span className="text-[0.6rem]">MONTHLY FEES</span>
+            <span>$347.63M</span>
+            <span className="text-[0.7rem]">Monthly Volume</span>
           </div>
           <div className="flex flex-col items-center justify-center">
-          <span>97.16K</span>
-          <span className="text-[0.7rem]">MONTHLY USERS</span>
+            <span>$4.36M</span>
+            <span className="text-[0.6rem]">MONTHLY FEES</span>
+          </div>
+          <div className="flex flex-col items-center justify-center">
+            <span>97.16K</span>
+            <span className="text-[0.7rem]">MONTHLY USERS</span>
           </div>
         </div>
 
@@ -733,51 +1051,88 @@ export default function Home() {
             </svg>
           </div>
           <div className="w-[60%] flex justify-center py-3 items-center text-[0.5rem] text-slate-400 border-y border-y-slate-900">
-          Data and metrics are openly available on Token Terminal and Dune
+            Data and metrics are openly available on Token Terminal and Dune
           </div>
           <div className="w-full h-fit  flex flex-col justify-center items-center">
-            <Image src='/Images/rocket.png' width={500} height={200} className="w-[25rem] h-[25rem]" alt="rocket"/>
-            <button className="text-md text-slate-300 border boder-slate-900 rounded-xl px-2 py-2 relative bottom-32">Onboarding Guide</button>
-            <span className="w-[30%] flex justify-center text-center relative bottom-24 text-4xl font-bold">Looking to get started with Megadrome Finance?</span>
+            <Image
+              src="/Images/rocket.png"
+              width={500}
+              height={200}
+              className="w-[25rem] h-[25rem]"
+              alt="rocket"
+            />
+            <button className="text-md text-slate-300 border boder-slate-900 rounded-xl px-2 py-2 relative bottom-32">
+              Onboarding Guide
+            </button>
+            <span className="w-[30%] flex justify-center text-center relative bottom-24 text-4xl font-bold">
+              Looking to get started with Megadrome Finance?
+            </span>
           </div>
-          <div className='flex items-center w-full justify-center lg:flex'>
-      <div id='footer' className='h-fit flex flex-col pt-4 lg:pt-44 pb-12 px-20  w-full items-center justify-center gap-3'>
-        <div className='flex justify-between items-center w-full'>
-            <div className='flex text-[0.7rem] flex-col lg:flex-row gap-10 w-full'>
-                <span className='text-white'>Articles</span>
-                <span className='text-white'> Support</span>
-                <div className='flex gap-6'>
-                    <Image src="/Images/logos/x.png" width={20} height={20} alt='x'/>
-                    <Image src="/Images/logos/logo2.png" width={20} height={20} alt='x'/>
-                    <Image src="/Images/logos/discord.png" width={20} height={20} alt='x'/>
-                    <Image src="/Images/logos/logo4.png" width={20} height={20} alt='x'/>
-                    <Image src="/Images/logos/github.png" width={20} height={20} alt='x'/>
+          <div className="flex items-center w-full justify-center lg:flex">
+            <div
+              id="footer"
+              className="h-fit flex flex-col pt-4 lg:pt-44 pb-12 px-20  w-full items-center justify-center gap-3"
+            >
+              <div className="flex justify-between items-center w-full">
+                <div className="flex text-[0.7rem] flex-col lg:flex-row gap-10 w-full">
+                  <span className="text-white">Articles</span>
+                  <span className="text-white"> Support</span>
+                  <div className="flex gap-6">
+                    <Image
+                      src="/Images/logos/x.png"
+                      width={20}
+                      height={20}
+                      alt="x"
+                    />
+                    <Image
+                      src="/Images/logos/logo2.png"
+                      width={20}
+                      height={20}
+                      alt="x"
+                    />
+                    <Image
+                      src="/Images/logos/discord.png"
+                      width={20}
+                      height={20}
+                      alt="x"
+                    />
+                    <Image
+                      src="/Images/logos/logo4.png"
+                      width={20}
+                      height={20}
+                      alt="x"
+                    />
+                    <Image
+                      src="/Images/logos/github.png"
+                      width={20}
+                      height={20}
+                      alt="x"
+                    />
+                  </div>
                 </div>
-                
+                <div>
+                  <IoSunnySharp size={20} />
+                </div>
+                <div></div>
+              </div>
+              <div className="w-full">
+                <hr className="w-full border border-slate-900 " />
+              </div>
+              <div className="flex justify-between w-full items-center ">
+                <div className="flex flex-col lg:flex-row gap-10 text-[0.7rem] text-white">
+                  <span>Documentation</span>
+                  <span>Security</span>
+                  <span>BrandKit</span>
+                  <span>Tokens</span>
+                </div>
+                <div className="px-2 py-1 flex text-[0.7rem] text-slate-400 h-fit border border-slate-700 items-center gap-2 rounded-md">
+                  <span>Mirrors</span>
+                  <FaChevronLeft />
+                </div>
+              </div>
+              {/* <div className='flex justify-between w-full'></div> */}
             </div>
-            <div>
-                <IoSunnySharp size={20} />
-            </div>
-            <div></div>
-        </div>
-        <div className='w-full'>
-            <hr className='w-full border border-slate-900 '/>
-        </div>
-        <div className='flex justify-between w-full items-center '>
-            <div className='flex flex-col lg:flex-row gap-10 text-[0.7rem] text-white'>
-                <span>Documentation</span>
-                <span>Security</span>
-                <span>BrandKit</span>
-                <span>Tokens</span>
-            </div>
-            <div className='px-2 py-1 flex text-[0.7rem] text-slate-400 h-fit border border-slate-700 items-center gap-2 rounded-md'>
-                <span>Mirrors</span>
-                <FaChevronLeft/>
-            </div>
-        </div>
-        {/* <div className='flex justify-between w-full'></div> */}
-        </div>
-    </div>
+          </div>
         </div>
       </div>
     </div>

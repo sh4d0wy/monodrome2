@@ -12,14 +12,16 @@ const Navbar = () => {
     const [page,setPage] = useState(-1);
   return (
     <div className='w-full flex items-center justify-center relative z-10 '>
-    <div className='w-[90%] h-fit lg:py-10 lg:px-20 flex justify-between py-2 px-1'>
-        <div className='text-xl w-full  lg:text-2xl flex gap-1 items-end'>
+    <div className='w-[90%] h-fit my-10 flex justify-between '>
+        <div className='text-xl w-full  lg:text-2xl flex gap-1 items-center justify-center'>
+        <Link href="/" className='text-xl w-full  lg:text-2xl flex gap-1 items-center justify-center'>
             <Image src="/Images/logos/megadrome.png" width={50} height={50} alt="logo"/>
             <span> 
                 megadrome
             </span>
+        </Link>
         </div>
-        <div className=' hidden w-full lg:flex lg:justify-center gap-10 text-lg'>
+        <div className=' hidden w-full px-12 items-end lg:flex lg:justify-center gap-10 text-lg'>
             {items.map((item,index)=>{
                 if(!address.address){
                     if(index<2)
@@ -44,7 +46,7 @@ const Navbar = () => {
                 }
             })}
         </div>
-        <button className='text-sm lg:text-md w-full flex justify-center items-center rounded-xl hover:bg-[#6A768A] '>
+        <button className='text-sm lg:text-md w-full flex justify-center items-center '>
             <ConnectButton/>
         </button>
     </div>

@@ -1,4 +1,5 @@
-import React from 'react'
+"use client"
+import React, { useState } from 'react'
 import Image from 'next/image';
 import { FaChevronDown, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { FaX } from 'react-icons/fa6';
@@ -6,8 +7,10 @@ import { IoSunnySharp } from "react-icons/io5";
 import { RiErrorWarningFill } from "react-icons/ri";
 import { GoQuestion } from "react-icons/go";
 import Footer from '../../Components/Footer'
+import { Lock } from '@/app/Components/Lock';
 
 const page = () => {
+    const [create,setCreate] = useState(false);
     const relays=[
         {
             name:"veAERO Maxi",
@@ -82,11 +85,17 @@ const page = () => {
         }
     ]
   return (
+    <>
+    {create?
+    <div className='w-[100vw] h-[100vh] '>
+        <Lock/>
+    </div>:
     <div className="w-full h-fit flex py-2 lg:py-0 px-2 lg:px-12 flex-col items-center justify-center gap-[3rem] lg:gap-[5rem]">
+    
         <div className='w-[95%] lg:w-[90%] bg-gradient-to-r from-[#770250] to-[#230249] rounded-xl'>
             <div className='flex flex-col lg:flex-row items-center justify-between p-[2rem] lg:p-[2rem] gap-[2rem] lg:gap-0'>
                 <p className='text-lg'>Gain greater <span className='text-bold'>voting power and higher rewards</span> , by locking more tokens for longer.</p>
-                <button className='text-white bg-[#721D86] px-4 py-2 rounded-xl self-start lg:self-center'>Create Lock</button>
+                <button className='text-white bg-[#721D86] px-4 py-2 rounded-xl self-start lg:self-center' onClick={()=>setCreate(true)}>Create Lock</button>
             </div>
         </div>
         <div className='flex flex-col w-[90%] h-full gap-4 '>
@@ -139,6 +148,8 @@ const page = () => {
                     </div>
         </div>
     </div>
+    }
+    </>
   )
 }
 
