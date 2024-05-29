@@ -8,7 +8,7 @@ import { DiVim } from 'react-icons/di';
 import { IoSearch } from "react-icons/io5";
 import { RxCross2 } from "react-icons/rx";
 const page = () => {
-  const [openTokens,setOpenTokens]= useState(true);
+  const [openTokens,setOpenTokens]= useState(false);
   const tokens=[{
     image:'https://assets.smold.app/api/token/8453/0x96e890c6b2501a69cad5dba402bfb871a2a2874c/logo.svg',
     name:'VELO',
@@ -74,7 +74,10 @@ const page = () => {
               <div className='flex flex-col gap-[2rem] overflow-y-scroll h-[25rem]'>
                 {tokens.map((token)=>{
                   return(
-                    <div className='flex gap-[1rem] hover:bg-slate-400 p-4 rounded-md' onClick={()=>{setSelectedToken(`${token.name}`)}}>
+                    <div className='flex gap-[1rem] hover:bg-slate-400 p-4 rounded-md' onClick={()=>{
+                      setSelectedToken(`${token.name}`)
+                      setOpenTokens(false);
+                      }}>
                       <Image src={token.image}
                       alt="token"
                       width={50}

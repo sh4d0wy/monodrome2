@@ -11,7 +11,7 @@ export const Lock = () => {
       
             <div
           id="swap-box"
-          className="bg-[#252D37]  w-[90%] lg:w-[50%] h-[90%] lg:h-fit py-10 px-10 lg:px-20 flex flex-col gap-6 lg:gap-6"
+          className="bg-[#252D37]  w-[90%] lg:w-[50%] h-[90%] lg:h-[55vh] py-10 px-10 lg:px-20 flex flex-col gap-6 lg:gap-6"
         >
           <div className="flex justify-between w-full text-[#647186]">
             <span>Amount to lock</span>
@@ -62,8 +62,8 @@ export const Lock = () => {
                 </div>
           </div>
           
-           </div>
-        <div className="bg-[#252D37] w-[90%] lg:w-[50%] h-[90%] lg:h-fit py-12 flex flex-col gap-3 lg:gap-10 justify-center px-12">
+          </div>
+        <div className="bg-[#252D37] w-[90%] lg:w-[50%] h-[90%] lg:h-[55vh] py-12 flex flex-col gap-3 lg:gap-10 justify-center px-12">
           <div className='lg:text-xl text-lg' >New Lock</div>
           <div className="flex flex-col">
             <div className="flex gap-4">
