@@ -9,6 +9,7 @@ import Image from 'next/image';
 import { FaHamburger } from 'react-icons/fa';
 import { IoMdMenu } from 'react-icons/io';
 import { FaX } from 'react-icons/fa6';
+import ConnectButton from './ConnectButton';
 
 const Navbar = () => {
     const address = useAccount()
@@ -53,7 +54,7 @@ const Navbar = () => {
             })}
         </div>
         <button className='text-sm lg:text-md w-full flex justify-center items-center '>
-            <RainbowButton/>
+            <ConnectButton/>
         </button>
         <div className='w-[5%] flex lg:hidden items-center justify-end'>
             <IoMdMenu size={20} onClick={()=>setMenu(true)}/>

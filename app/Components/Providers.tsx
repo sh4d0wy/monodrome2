@@ -1,45 +1,37 @@
-"use client"
-import '@rainbow-me/rainbowkit/styles.css';
-import {
-  getDefaultConfig,
-  RainbowKitProvider,
-  darkTheme
-} from '@rainbow-me/rainbowkit';
-import { WagmiProvider, useAccount } from 'wagmi';
-import {
-  sepolia,
-  etherlinkTestnet,
-  evmos 
-} from 'wagmi/chains';
-import {
-  QueryClientProvider,
-  QueryClient
-} from "@tanstack/react-query";
-import { ReactNode } from 'react';
-import UserContextProvider from '../Context/UserContextProvider';
+'use client'
 
-export default function Provider({children}:{children:ReactNode}){
-    const projectId = "73c18f0d44294688087b7b4f170ee948";
-    const config = getDefaultConfig({
-        appName: 'My RainbowKit App',
-        projectId: projectId,
-        chains: [sepolia,etherlinkTestnet,evmos],
-        ssr: true, 
-      });
-      const queryClient = new QueryClient();
-    return(
-    <>
-    <WagmiProvider config={config}>
-      <QueryClientProvider client={queryClient}>
-        <RainbowKitProvider theme={darkTheme({
-            accentColor:"#8B075E",
-        })}>
-          <UserContextProvider>
-          {children}
-          </UserContextProvider>
-        </RainbowKitProvider>
-      </QueryClientProvider>
+import React, { ReactNode } from 'react'
+import { config, projectId } from '../config'
+
+import { createWeb3Modal } from '@web3modal/wagmi/react'
+
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+
+import { State, WagmiProvider } from 'wagmi'
+
+// Setup queryClient
+const queryClient = new QueryClient()
+
+if (!projectId) throw new Error('Project ID is not defined')
+
+// Create modal
+createWeb3Modal({
+  wagmiConfig: config,
+  projectId,
+  enableAnalytics: true, // Optional - defaults to your Cloud configuration
+  enableOnramp: true // Optional - false as default
+})
+
+export default function Provider({
+  children,
+  initialState
+}: {
+  children: ReactNode
+  initialState?: State
+}) {
+  return (
+    <WagmiProvider config={config} initialState={initialState}>
+      <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
     </WagmiProvider>
-    </>
-    )
+  )
 }

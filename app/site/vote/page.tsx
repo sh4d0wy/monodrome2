@@ -52,14 +52,14 @@ const page = () => {
             <button className='border w-[10rem] focus:bg-blue-700 focus:text-white rounded-r-lg border-gray-500 text-sm text-gray-400 px-6 py-2'>All Pools</button>
         </div>
         <div className='flex flex-col gap-1 w-full text-[0.75rem]'>
-            <div className='w-full rounded-lg flex w-full bg-[#252D37] px-6 py-1'>
-              <span className='w-[40%]'>POOLS</span>
+            <div className='rounded-lg flex w-full bg-[#252D37] px-6 py-1'>
+              <span className='w-[33%] px-8'>POOLS</span>
               <div className='flex justify-between w-full items-end'>
-                <span className='w-[16%] flex justify-end px-1'>FEES</span>
-                <span className='w-[16%] flex justify-end px-1'>INCENTIVES</span>
-                <span className='w-[16%] flex justify-end px-1'>TOTAL REWARDS</span>
-                <div className='w-[30%] flex '>
-                <span className='w-2/3 flex justify-end px-1'>vAPR</span>
+                <span className='w-[20%] flex justify-end px-1'>FEES</span>
+                <span className='w-[20%] flex justify-end px-1'>INCENTIVES</span>
+                <span className='w-[20%] flex px-1 justify-end'>TOTAL REWARDS</span>
+                <div className='w-[20%] flex justify-between gap-4'>
+                <span className='w-2/3 flex  px-1'>vAPR</span>
                 <span className='w-full flex justify-end px-1'>SELECT POOL</span>
                 </div> 
               </div>

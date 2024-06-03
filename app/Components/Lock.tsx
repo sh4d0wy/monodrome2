@@ -7,7 +7,7 @@ import { RiErrorWarningFill } from 'react-icons/ri'
 export const Lock = () => {
   return (
     <div className="w-full h-fit  flex px-2 lg:px-12 flex-col items-center justify-center">
-        <div className=" flex flex-col lg:flex-row gap-[5vw] lg:gap-[3vw] items-center justify-center w-full lg:w-[90%] my-[4vw] h-full my-10">
+        <div className=" flex flex-col lg:flex-row gap-[5vw] lg:gap-[3vw] items-center justify-center w-full lg:w-[90%]  h-full my-10">
       
             <div
           id="swap-box"
@@ -45,7 +45,7 @@ export const Lock = () => {
               width={20}
               height={20}
               alt="swap"
-              className="rounded-sm  relative  "
+              className="rounded-sm  relative"
             />
           </div>
           <div>
@@ -64,7 +64,7 @@ export const Lock = () => {
           
           </div>
         <div className="bg-[#252D37] w-[90%] lg:w-[50%] h-[90%] lg:h-[55vh] py-12 flex flex-col gap-3 lg:gap-10 justify-center px-12">
-          <div className='lg:text-xl text-lg' >New Lock</div>
+          <div className='lg:text-xl text-lg'>New Lock</div>
           <div className="flex flex-col">
             <div className="flex gap-4">
               <div className="bg-[#0F172B] text-white rounded-full py-1 px-1 flex justify-center text-[0.7rem] h-6 w-6">

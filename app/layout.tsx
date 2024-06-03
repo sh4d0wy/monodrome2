@@ -3,6 +3,9 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Provider from "./Components/Providers";
 import NextTopLoader from 'nextjs-toploader';
+import { cookieToInitialState } from "wagmi";
+import { config } from "./config";
+import { headers } from "next/headers";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,7 +25,7 @@ export default function RootLayout({
         <NextTopLoader
         color="#8B075E"
         />
-        <Provider>
+        <Provider >
         {children}
         </Provider>
         </body>
